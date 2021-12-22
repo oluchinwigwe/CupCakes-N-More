@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(225deg, #f0d8c1 0%, #e2dbac 100%);
+      }
+      h1 {
+        text-align: center;
+        color: blueviolet;
+        font-style: italic;
+        font-family: ubuntu, serif;
+        font-size: 36px;
+      }
+      h2 {
+        text-align: center;
+        color: blueviolet;
+        font-family: ubuntu, serif;
+        font-size: 28px;
+      }
+      p {
+        text-align: center;
+        font-size: 20px;
+        font-family: helvetica, serif;
+        line-height: 1.5;
+        font-weight: bold;
+        color: grey;
+      }
+      span {
+        color: blueviolet;
+        font-style: italic;
+        font-family: lora, serif;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      img {
+        display: block;
+        max-width: 400px;
+        margin: 25px auto;
+        border-radius: 40px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+      hr {
+        border: 2px solid grey;
+        padding: 2px;
+      }
+
+      a {
+        text-decoration: none;
+        font-style: oblique;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: violet;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        font-size: 24px;
+        font-family: ubuntu, lora, serif;
+        padding: 20px 35px;
+        border-radius: 15px;
+        border: none;
+        background-color: blueviolet;
+        color: #fff;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: violet;
+      }
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 25px 50px;
+      }
+      .more {
+        text-align: center;
+        font-family: lora;
+        font-size: 20px;
+      }
+      .footer {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>CupCakes N More</h1>
+      <p>
+        <span>CupCakes N More</span> makes perfectly moist, completely
+        irresistible cupcakes! They are light, fluffy and are topped with creamy
+        vanilla buttercream With a dash of sprinkles for the ultimate sweet
+        treat.<br /><em>One taste will leave you craving for more.</em>
+      </p>
+
+      <h2>Flavors</h2>
+      <p>Here are some cupcake <strong>flavors</strong> we offer</p>
+      <hr />
+      <img
+        src="http://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg"
+        alt="chocolate flavor"
+      />
+      <hr />
+      <img
+        src="https://bakerish.com/wp-content/uploads/2019/03/VANILLA-CUPCAKES.jpg"
+        alt="vanilla flavor"
+      />
+      <hr />
+      <img
+        src="https://thenovicechefblog.com/wp-content/uploads/2010/09/Red-Velvet-Cupcakes-1-735x1158.jpg"
+        alt="red velvet"
+      />
+      <hr />
+      <img
+        src="https://www.the-girl-who-ate-everything.com/wp-content/uploads/2016/08/strawberry-milkshake-4.jpg"
+        alt="strawberry flavor"
+      />
+
+      <p class="more">
+        Want to learn more about cupcake?
+        <a href="https://en.wikipedia.org/wiki/Cupcake" target="_blank"
+          >Learn More</a
+        >
+      </p>
+      <button>Order Yours Now</button>
+      <p class="footer">Page created by Oluchi N</p>
+    </div>
+    <script>
+      function cupcakeOrder() {
+        let name = prompt("What is your name?");
+        let flavor = prompt("What flavor do you want?");
+        let amount = prompt("How many would you like?");
+
+        let button = document.querySelector("button");
+        button.addEventListener("click", cupcakeOrder);
+
+        if (amount >= 1) {
+          alert("Thank you " + name + " " + " your order will be ready soon.");
+        } else {
+          alert("Sorry, please enter an amount.");
+        }
+      }
+      cupcakeOrder();
+    </script>
+  </body>
+</html>
